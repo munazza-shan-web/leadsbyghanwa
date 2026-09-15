@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Custom B2B and local-business prospect lists, researched and organized for outreach." />
-  <title>Ghanwa Shan — Lead Generation Specialist</title>
+  <title>Munazza Shan — Lead Generation Specialist</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
@@ -12,14 +12,14 @@
 </head>
 <body>
   <header class="nav-shell">
-    <a class="brand" href="#top" aria-label="Home"><span>MS</span> Ghanwa Shan</a>
+    <a class="brand" href="#top" aria-label="Home"><span>MS</span> Munazza Shan</a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
     <nav id="main-nav" aria-label="Main navigation">
       <a href="#services">Services</a>
       <a href="#sample">Sample</a>
       <a href="#process">Process</a>
       <a href="#experience">Experience</a>
-      <a class="nav-cta" href="#contact">Request a sample</a>
+      <a class="nav-cta request-trigger" href="#sample-request">Request a sample</a>
     </nav>
   </header>
 
@@ -164,15 +164,60 @@
       <p class="eyebrow"><span></span> Ready when you are</p>
       <h2>Tell me who you need<br>to <em>reach.</em></h2>
       <p>Share your target market, industry, company size, preferred roles and required number of leads. I can prepare a small custom sample before the full project.</p>
-      <button class="button primary copy-brief" type="button">Copy project brief <span>↗</span></button>
+      <button class="button primary request-trigger" type="button">Request a custom sample <span>↗</span></button>
       <small id="copy-status" aria-live="polite">When contacting me, please use the platform where you found this portfolio.</small>
     </section>
+
+    <div class="modal" id="sample-request" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="request-title">
+        <button class="modal-close" type="button" aria-label="Close request form" data-close-modal>×</button>
+        <div class="form-intro">
+          <p class="section-kicker">CUSTOM SAMPLE REQUEST</p>
+          <h2 id="request-title">Tell me who you need to reach.</h2>
+          <p>Complete the details below and I’ll receive a clear brief for your custom prospect sample.</p>
+        </div>
+        <form id="lead-request-form">
+          <div class="form-grid">
+            <label><span>Your name *</span><input type="text" name="name" required autocomplete="name" placeholder="Your name"></label>
+            <label><span>Company name</span><input type="text" name="company" autocomplete="organization" placeholder="Company or agency"></label>
+            <label class="full"><span>Business email *</span><input type="email" name="email" required autocomplete="email" placeholder="you@company.com"></label>
+            <label><span>Target industry *</span><input type="text" name="industry" required placeholder="e.g. Roofing, SaaS, E-commerce"></label>
+            <label><span>Number of leads *</span><select name="leadCount" required><option value="">Select quantity</option><option>25–50 leads</option><option>51–100 leads</option><option>101–250 leads</option><option>251–500 leads</option><option>500+ leads</option></select></label>
+            <label><span>Target location *</span><input type="text" name="location" required placeholder="Country, state, city or ZIP codes"></label>
+            <label><span>Company size</span><select name="companySize"><option>Any size</option><option>1–10 employees</option><option>11–50 employees</option><option>51–200 employees</option><option>201–500 employees</option><option>500+ employees</option></select></label>
+            <label class="full"><span>Decision-maker roles</span><input type="text" name="roles" placeholder="e.g. Founder, Owner, CEO, Marketing Director"></label>
+          </div>
+
+          <fieldset>
+            <legend>Fields required in your list</legend>
+            <div class="checkbox-grid">
+              <label><input type="checkbox" name="fields" value="Contact name" checked> Contact name</label>
+              <label><input type="checkbox" name="fields" value="Job title" checked> Job title</label>
+              <label><input type="checkbox" name="fields" value="Company name" checked> Company name</label>
+              <label><input type="checkbox" name="fields" value="Business email" checked> Business email</label>
+              <label><input type="checkbox" name="fields" value="Phone number"> Phone number</label>
+              <label><input type="checkbox" name="fields" value="LinkedIn URL"> LinkedIn URL</label>
+              <label><input type="checkbox" name="fields" value="Company website"> Company website</label>
+              <label><input type="checkbox" name="fields" value="Employee count"> Employee count</label>
+              <label><input type="checkbox" name="fields" value="Industry"> Industry</label>
+              <label><input type="checkbox" name="fields" value="Location"> Location</label>
+            </div>
+          </fieldset>
+
+          <label class="notes-field"><span>Additional filters or instructions</span><textarea name="notes" rows="4" placeholder="Technology used, revenue, keywords, exclusions, preferred format, deadline, or anything else..."></textarea></label>
+          <label class="consent"><input type="checkbox" required> I understand this request is for a small custom sample and project discussion.</label>
+          <button class="button primary form-submit" type="submit">Prepare sample request <span>↗</span></button>
+          <p class="form-status" id="form-status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
   </main>
 
   <footer>
-    <a class="brand" href="#top"><span>MS</span> Ghanwa Shan</a>
+    <a class="brand" href="#top"><span>MS</span> Munazza Shan</a>
     <p>Lead Generation Specialist · Prospect Research · CRM Support</p>
-    <p>© 2026 Ghanwa Shan</p>
+    <p>© 2026 Munazza Shan</p>
   </footer>
   <script src="script.js"></script>
 </body>
